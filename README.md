@@ -123,6 +123,16 @@ Kafka topic dummy topic data 4
 …
 ```
 
+## For replicating from remote server 
+- Change the SrcKafkaZkPath in 
+```
+$basedir/uReplicator-Controller/src/main/java/com/uber/stream/kafka/mirrormaker/controller/ControllerStarter.java
+```
+- Change zookeeper.connect to your souce zookeeper in
+```
+$basedir/config/consumer.properties
+```
+
 ## Shutdown
 When you’re done, you can clean everything up using the same grid script:
 ```
